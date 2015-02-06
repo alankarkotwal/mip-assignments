@@ -1,0 +1,6 @@
+
+%% Function for RRMSE
+
+function[a] = rrmse(img1,img2)
+a = img1 - img
+end
