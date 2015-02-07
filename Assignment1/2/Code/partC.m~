@@ -1,0 +1,47 @@
+
+%% Function C: RRMSE plot 
+
+% function[] = partC()
+f = phantom(256);
+[rt,x] = radon(f,linspace(0,177,60));
+
+ft_R = fftshift(fft(rt,[],1),1);
+wmax = round(max(max(ft_R)));  % this is scaled to 1 in L
+L = linspace(0,1,wmax);
+rrm = L;
+
+for i=1:wmax
+disp(i);
+rrm(1,i) = rrmse(f,myFilter12(1,L(1,i),rt,x));
+end
+
+mask = fspecial('gaussian',11,1);
+S1 = conv2(f,mask,'same');
+mask = fspecial('gaussian',51,5);
+S5 = conv2(f,mask,'same');
+
+[rt,x] = radon(S1,linspace(0,177,60));
+
+ft_R = fftshift(fft(rt,[],1),1);
+wmax = round(max(max(ft_R)));  % this is scaled to 1 in L
+L = linspace(0,1,wmax);
+rrm = L;
+
+for i=1:wmax
+disp(i);
+rrm(1,i) = rrmse(S1,myFilter12(1,L(1,i),rt,x));
+end
+
+[rt,x] = radon(S5,linspace(0,177,60));
+
+ft_R = fftshift(fft(rt,[],1),1);
+wmax = round(max(max(ft_R)));  % this is scaled to 1 in L
+L = linspace(0,1,wmax);
+rrm = L;
+
+for i=1:wmax
+disp(i);
+rrm(1,i) = rrmse(S5,myFilter12(1,L(1,i),rt,x));
+end
+
+% end

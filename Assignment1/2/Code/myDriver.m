@@ -1,4 +1,5 @@
 
+tic;
 %% Riddhish Bhalodia and Alankar Kotwal
 
 % the phantom image
@@ -74,3 +75,9 @@ colormap(gray(256)); axis image; axis off
 
 disp('RRMSE for i=5');
 disp(rrmse3);
+
+%% Part C: plots (takes about 15 min for all the three plots to get executed)
+
+partC(img);
+
+toc;
