@@ -12,25 +12,25 @@ img = phantom(256);
 % function myFilter12.
 
 figure('Name','PartA: Ram Lak Filter');
-subplot(1,2,1);imagesc( out11 ); title('Manual filtering:Ram Lak, L=wmax')
+subplot(1,2,1);imagesc( out11 ); title('Manual filtering by Ram Lak, L=wmax')
 colormap(gray(256)); axis image; axis off
 
-subplot(1,2,2);imagesc( out12 ); title('Manual filtering:Ram Lak, L=wmax/2')
+subplot(1,2,2);imagesc( out12 ); title('Manual filtering by Ram Lak, L=wmax/2')
 colormap(gray(256)); axis image; axis off
 
 figure('Name','PartA: Shepp-Logan Filter');
-subplot(1,2,1);imagesc( out21 ); title('Manual filtering:Shepp-Logan, L=wmax')
+subplot(1,2,1);imagesc( out21 ); title('Manual filtering by Shepp-Logan, L=wmax')
 colormap(gray(256)); axis image; axis off
 
-subplot(1,2,2);imagesc( out22 ); title('Manual filtering:Shepp-Logan, L=wmax/2')
+subplot(1,2,2);imagesc( out22 ); title('Manual filtering by Shepp-Logan, L=wmax/2')
 colormap(gray(256)); axis image; axis off
 
 figure('Name','PartA: Cosine Filter');
-subplot(1,2,1);imagesc( out31 ); title('Manual filtering:Cosine Filter, L=wmax')
+subplot(1,2,1);imagesc( out31 ); title('Manual filtering by Cosine Filter, L=wmax')
 colormap(gray(256)); axis image; axis off
 
 
-subplot(1,2,2);imagesc( out32 ); title('Manual filtering:Cosine Filter, L=wmax/2')
+subplot(1,2,2);imagesc( out32 ); title('Manual filtering by Cosine Filter, L=wmax/2')
 colormap(gray(256)); axis image; axis off
 
 % The diffrences in the images can be seen in the same manner and they are
@@ -52,8 +52,6 @@ colormap(gray(256)); axis image; axis off
 subplot(1,2,2);imagesc( R0 ); title('R0')
 colormap(gray(256)); axis image; axis off
 
-disp('RRMSE for i=0');
-disp(rrmse1);
 
 figure('Name','PartB: S1 and R1');
 subplot(1,2,1);imagesc( S1 ); title('S1')
@@ -62,15 +60,9 @@ colormap(gray(256)); axis image; axis off
 subplot(1,2,2);imagesc( R1 ); title('R1')
 colormap(gray(256)); axis image; axis off
 
-disp('RRMSE for i=1');
-disp(rrmse2);
-
 figure('Name','PartB: S5 and R5');
 subplot(1,2,1);imagesc( S5 ); title('S5')
 colormap(gray(256)); axis image; axis off
 
 subplot(1,2,2);imagesc( R5 ); title('R5')
 colormap(gray(256)); axis image; axis off
-
-disp('RRMSE for i=5');
-disp(rrmse3);
