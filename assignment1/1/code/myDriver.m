@@ -9,3 +9,4 @@
 f = phantom(128);
 
 a = myIntegration(f, 0, 0, 1);
+b = myRadonTrans(f, 1);

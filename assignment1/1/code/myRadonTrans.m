@@ -6,5 +6,14 @@
 % Run the code after CDing to that directory.
 % *******************************************************************************************
 
-function myRadonTrans
+function R = myRadonTrans(im, stepSize)
+    [tArr, thetaArr] = meshgrid(-90:5:90, 0:5:175);
+    R = zeros(36, 37);
+    
+    for i=1:36
+        for j=1:37
+            disp([i j]);
+            R(i, j) = myIntegration(im, tArr(i, j), thetaArr(i, j), stepSize);
+        end
+    end
 end
