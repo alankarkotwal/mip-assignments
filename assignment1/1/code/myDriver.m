@@ -7,6 +7,5 @@
 % *******************************************************************************************
 
 f = phantom(128);
-
-a = myIntegration(f, 0, 0, 1);
-b = myRadonTrans(f, 1);
+RN = myRadonTrans(f, 3);
+imshow(RN); figure; imshow(mat2gray(RN));
