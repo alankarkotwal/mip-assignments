@@ -1,5 +1,5 @@
 % *******************************************************************************************
-% CS736 Assignment 1 Question 7
+% CS736 Assignment 1 Question 1
 % Alankar Kotwal <alankar.kotwal@iitb.ac.in>
 % myRadonTransform function
 % Make sure the driver is in the same directory as this file
