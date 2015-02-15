@@ -10,7 +10,7 @@ function [out,delta] = obj_func(x,y,z,t)
 
     for i=1:6
         r(i) = Sg(i) - exp(-0.1*g(i,:)*(L*L')*g(i,:)');  % Residual
-        J(i,:) = 0.2.*exp(-0.1*g(i,:)*(L*L')*g(i,:)').*[x*g(i,1)^2 + y*g(i,1)*g(i,2), y*g(i,2)^2 + x*g(i,1)*g(i,2), z*g(i,2)^2 ];
+        J(i,:) = 2.*exp(-0.1*g(i,:)*(L*L')*g(i,:)').*[x*g(i,1)^2 + y*g(i,1)*g(i,2), y*g(i,2)^2 + x*g(i,1)*g(i,2), z*g(i,2)^2 ];
     end
 
     out = sum(abs(r.*r));

@@ -1,7 +1,7 @@
 
 %% Part A: Optimization problem of Diffusion Tensor MRI estimation
 
-function [D,objfunction,D1,D2,D3,D4] = partA(x,y,z)
+function [D,L,objfunction,D1,D2,D3,D4] = partA(x,y,z)
  
 % Data input array
 g = [[1, 0]; [0.866, 0.5]; [0.5, 0.866]; [0, 1]; [-0.5, 0.866]; [-0.866, 0.5]];
