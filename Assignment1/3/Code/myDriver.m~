@@ -14,17 +14,12 @@ figure;
 plot(objfunction);
 title('Plot of logarithm of objective function as per iteration');
 figure;
-% If we require the whole complex number to be plotted we can just remove
-% the real from all Di's
-plot(real(D1));
-title('Plot of 1st element od D with iteration');
+plot(objfunction);
+title('Plot of logarithm of objective function as per iteration');
 figure;
-plot(real(D2));
-title('Plot of 2nd element of D with iteration');
+plot(objfunction);
+title('Plot of of iteration');
 figure;
-plot(real(D3));
-title('Plot of 3rd element of D with iteration');
-figure;
-plot(real(D4));
+plot(objfunction);
 title('Plot of 4th element of D with iteration');
 toc;
