@@ -1,0 +1,27 @@
+Original RRMSE 0.3725
+
+a => alpha, b => gamma.
+
+Quad: (step size 0.1)
+a* = 0.995
+RRMSE = 0.0218
+RRMSE(1.2a*) = 0.0231				| taken at alpha=1 because 0.995*1.2>1
+RRMSE(0.8a*) = 0.1482
+
+Huber: (step size 0.1)
+a* = 0.99
+b* = 15
+RRMSE = 0.0222
+RRMSE (1.2a*, b*) = 0.0231			| taken at alpha=1 because 0.99*1.2>1
+RRMSE (0.8a*, b*) = 0.0277
+RRMSE (a*, 1.2b*) = 0.0222			| This becomes insensitive to gamma after a certain threshold
+RRMSE (a*, 0.8b*) = 0.0222
+
+Disc-adapt: (initial step size changed to 0.796 here)
+a* = 0.55
+b* = 0.0001
+RRMSE = 1.0700e-04
+RRMSE (1.2a*, b*) = 0.0028
+RRMSE (0.8a*, b*) = 2.6323e-04
+RRMSE (a*, 1.2b*) = 1.0997e-04
+RRMSE (a*, 0.8b*) = 1.0813e-04
