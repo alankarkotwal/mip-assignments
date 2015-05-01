@@ -1,0 +1,7 @@
+Riddhish Bhalodia(120070003)
+Alankar Kotwal(12D070010)
+
+Just Run myDriver
+All results are in the output images folder
+code runs for 3 sec
+
